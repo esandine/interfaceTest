@@ -1,18 +1,25 @@
-public abstract class Shape{
+public class Rectangle extends Shape implements Area{
 
-    private String name;
+    private double length,width;
 
-    public Shape(){
-	name = "";
+    public Rectangle(double length, double width, String name){
+	super(name);
+	this.length = length;
+	this.width = width;
     }
 
-    public Shape(String name){
-	this.name = name;
+    public double getLength(){
+	return length;
     }
 
-    public String getName(){
-	return name;
+    public double getWidth(){
+	return width;
     }
 
-    public abstract String toString();
+    public String toString(){
+	return "Rectangle "+getName()+" that is "+length+" by "+width;
+    }
+    public double getArea(){
+	return getLength()*getWidth();
+    }
 }
