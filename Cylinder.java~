@@ -1,9 +1,10 @@
-public class Prism extends Rectangle implements Volume{
+
+public class Cylinder extends Circle implements Volume{
 
     private double height;
 
-    public Prism(double length, double width, double height, String name){
-	super(length,width,name);
+    public Cylinder(double radius, double height,String name){
+	super(radius,name);
 	this.height = height;
     }
 
@@ -15,6 +16,6 @@ public class Prism extends Rectangle implements Volume{
 	return "FIXME!";
     }
     public double getVolume(){
-	return getHeight()*getArea();
+	return getArea()*getVolume();
     }
 }

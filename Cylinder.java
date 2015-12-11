@@ -1,18 +1,21 @@
-public abstract class Shape{
 
-    private String name;
+public class Cylinder extends Circle implements Volume{
 
-    public Shape(){
-	name = "";
+    private double height;
+
+    public Cylinder(double radius, double height,String name){
+	super(radius,name);
+	this.height = height;
     }
 
-    public Shape(String name){
-	this.name = name;
+    public double getHeight(){
+	return height;
     }
 
-    public String getName(){
-	return name;
+    public String toString(){
+	return "FIXME!";
     }
-
-    public abstract String toString();
+    public double getVolume(){
+	return getArea()*getHeight();
+    }
 }
