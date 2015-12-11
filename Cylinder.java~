@@ -16,6 +16,6 @@ public class Cylinder extends Circle implements Volume{
 	return "FIXME!";
     }
     public double getVolume(){
-	return getArea()*getVolume();
+	return getArea()*getHeight();
     }
 }
